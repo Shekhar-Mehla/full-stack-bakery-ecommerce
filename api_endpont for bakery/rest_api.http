@@ -1,0 +1,17 @@
+
+###
+@base_url = http://localhost:8000
+GET {{base_url}}
+Content-Type: application/json
+
+
+
+### Post method
+POST  {{base_url}}
+Content-Type: application/json
+
+{"name":"bread"}
+
+### Delete mehtod
+DELETE   {{base_url}}
+Content-Type: application/json

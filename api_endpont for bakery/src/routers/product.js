@@ -1,12 +1,17 @@
 import express from "express";
 
-import { getTask } from "../controllers/productController.js";
+import {
+  getProduct,
+  updateProduct,
+  addProduct,
+  deleteProduct,
+} from "../controllers/cakeController.js";
 export const router = express.Router();
 
 const routerfunc = () => {
-  router.get("/", getTask);
-  router.post("/");
-  router.patch("/");
-  router.delete("/");
+  router.get("/", getProduct);
+  router.post("/", addProduct);
+  router.patch("/", updateProduct);
+  router.delete("/", deleteProduct);
 };
 routerfunc();
