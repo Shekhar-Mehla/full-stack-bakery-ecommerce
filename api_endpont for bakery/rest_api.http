@@ -1,17 +1,11 @@
+#api end point
 
-###
-@base_url = http://localhost:8000
-GET {{base_url}}
+@baseurl = http://localhost:8000/api/v1/products
+
+
+###post product
+POST {{baseurl}}
 Content-Type: application/json
 
-
-
-### Post method
-POST  {{base_url}}
-Content-Type: application/json
-
-{"name":"bread"}
-
-### Delete mehtod
-DELETE   {{base_url}}
-Content-Type: application/json
+{"name":"shekhar",
+"price":500}

@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import { connection } from "./src/configuration/database_connection.js";
-import { router } from "./src/routers/product.js";
+import { productRouter } from "./src/routers/productRouter.js";
 const app = express();
 // middleware
 app.use(express.json());
@@ -9,7 +9,7 @@ connection();
 app.use(cors());
 
 const PORT = process.env.PORT || 8000;
-app.use("/", router);
+app.use("/api/v1/products", productRouter);
 app.listen(PORT, (error) => {
   error
     ? console.log(error)
