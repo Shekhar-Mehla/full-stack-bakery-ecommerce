@@ -1,11 +1,25 @@
 #api end point
 
-@baseurl = http://localhost:8000/api/v1/products
+@baseurlproduct = http://localhost:8000/api/v1/products
+@baseurlcategory = http://localhost:8000/api/v1/categories
 
 
 ###post product
-POST {{baseurl}}
+POST {{{{baseurlproduct}}}}
 Content-Type: application/json
 
 {"name":"shekhar",
-"price":500}
+"price":200}
+
+
+
+
+
+#categories 
+### post category
+POST {{baseurlcategory}}
+Content-Type: application/json
+
+{
+  "name":"bread"
+}
