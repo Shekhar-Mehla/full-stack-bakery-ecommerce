@@ -5,11 +5,13 @@
 
 
 ###post product
-POST {{{{baseurlproduct}}}}
+POST @{{baseurlproduct}}
 Content-Type: application/json
 
 {"name":"shekhar",
-"price":200}
+"price":200,
+"category_id":"bread",
+}
 
 
 

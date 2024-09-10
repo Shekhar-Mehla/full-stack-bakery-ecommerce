@@ -1,11 +1,12 @@
 import mongoose from "mongoose";
+import { Schema } from "mongoose";
 
-const product = {
+export const productSchema = new Schema({
   name: {
     type: String,
   },
   description: { type: String },
-  // category_id,
+  category_id: { type: Schema.Types.ObjectId, ref: "ProductCategory" },
   price: { type: Number },
   size_weight: { type: String },
   ingredients: { type: String },
@@ -14,6 +15,4 @@ const product = {
 
   image_url: { type: String },
   is_seasonal: { type: String, default: false },
-};
-
-export const productSchema = new mongoose.Schema(product);
+});

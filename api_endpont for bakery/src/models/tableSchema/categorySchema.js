@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-
+import { Schema } from "mongoose";
 const schema = {
   name: {
     type: String,
@@ -13,4 +13,4 @@ const schema = {
     type: String,
   },
 };
-export const categorySchema = new mongoose.Schema(schema);
+export const categorySchema = new Schema(schema);
