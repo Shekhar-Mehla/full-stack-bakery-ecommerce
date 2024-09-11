@@ -23,3 +23,26 @@ export const insertProduct = async (req, res) => {
     });
   }
 };
+
+// get all products
+export const getProduct = async (req, res) => {
+  try {
+    const product = await ProductsCollection.find();
+    console.log(product);
+    product
+      ? res.status(200).json({
+          status: "successfull",
+          message: "product list is reterieved succefully",
+          product,
+        })
+      : res.status(200).json({
+          status: "unsuccessfull",
+          message: "unable to get product list check for database connection",
+        });
+  } catch (error) {
+    res.status(200).json({
+      status: error,
+      message: error.message,
+    });
+  }
+};
