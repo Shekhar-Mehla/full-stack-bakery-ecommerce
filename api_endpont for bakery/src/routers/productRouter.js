@@ -8,7 +8,7 @@ import {
 export const productRouter = express.Router();
 
 productRouter.get("/", getProduct);
-productRouter.get("/cakes", getcakes);
+productRouter.get("/:cakes", getcakes);
 
 productRouter.post("/", insertProduct);
 // productRouter.patch("/", updateProduct);

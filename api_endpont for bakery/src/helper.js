@@ -4,34 +4,34 @@ export const category_id_getter = async (category_id) => {
   console.log(category_id);
   try {
     switch (category_id) {
-      case "Bread":
-        const bread = await categoryCollection.findOne({ name: "Bread" });
+      case "breads":
+        const bread = await categoryCollection.findOne({ name: "breads" });
         return bread._id;
         // code to be executed if expression === value1
         break;
-      case "Cake":
-        const cake = await categoryCollection.findOne({ name: "Cake" });
+      case "cake":
+        const cake = await categoryCollection.findOne({ name: "Cakes" });
         return cake._id;
         // code to be executed if expression === value1
         break;
-      case "Muffin":
-        const muffin = await categoryCollection.findOne({ name: "Muffin" });
+      case "muffins":
+        const muffin = await categoryCollection.findOne({ name: "muffins" });
         return muffin._id;
         // code to be executed if expression === value1
         break;
-      case "Cookies":
-        const cookies = await categoryCollection.findOne({ name: "Cookies" });
+      case "cookies":
+        const cookies = await categoryCollection.findOne({ name: "cookies" });
         return cookies._id;
         // code to be executed if expression === value1
         break;
-      case "Pastries":
-        const pastries = await categoryCollection.findOne({ name: "Pastries" });
+      case "pastries":
+        const pastries = await categoryCollection.findOne({ name: "pastries" });
         return pastries._id;
         // code to be executed if expression === value1
         break;
 
       default:
-        console.log("hello owrld1");
+        console.log("no category find");
     }
   } catch (error) {}
 };

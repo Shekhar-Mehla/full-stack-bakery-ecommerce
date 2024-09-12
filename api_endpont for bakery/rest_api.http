@@ -27,5 +27,8 @@ POST {{baseurlcategory}}
 Content-Type: application/json
 
 {
-  "name":"Pastries"
+"name":"muffins"
+
+
 }
+ 
