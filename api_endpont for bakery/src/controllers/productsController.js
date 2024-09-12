@@ -4,8 +4,10 @@ import { category_id_getter } from "../helper.js";
 // insert productTable into database
 export const insertProduct = async (req, res) => {
   try {
-    req.body.category_id = await category_id_getter(req.body.category_id);
-    const product = await ProductsCollection(req.body).save();
+    const categoryId = await category_id_getter(req.body.category_id);
+    req.body.category_id = categoryId;
+    console.log(req.body.category_id);
+    const product = await ProductsCollection(req.body).save({ new: true });
     console.log(product._id);
     product?._id
       ? res.status(200).json({
@@ -45,4 +47,8 @@ export const getProduct = async (req, res) => {
       message: error.message,
     });
   }
+};
+// get product by category
+export const getcakes = (req, res) => {
+  res.send(req.params);
 };

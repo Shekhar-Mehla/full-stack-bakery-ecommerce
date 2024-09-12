@@ -1,6 +1,6 @@
 #api end point
 
-@baseurlproduct = http://localhost:8000/api/v1/products
+@baseurlproduct = http://localhost:8000/api/v1/products/cakes
 #category url
 @baseurlcategory = http://localhost:8000/api/v1/categories
 
@@ -11,7 +11,7 @@ Content-Type: application/json
 
 {"name":"shekhar",
 "price":200,
-"category_id":"bread"
+"category_id":"Bread"
 }
 
 ### get product
@@ -27,5 +27,5 @@ POST {{baseurlcategory}}
 Content-Type: application/json
 
 {
-  "name":"bread"
+  "name":"Pastries"
 }
